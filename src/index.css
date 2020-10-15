@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+      background: #fcfafa !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.linkCard{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  
+}
+.logo{
+ margin-top: 20px;
+}
+.Links{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  padding-top: 20px;
+  align-items: left;
+  padding-left: 5px;
+  padding-bottom: 15px;
+}
+.linkNav{
+  /* padding-left: 15px; */
+  margin-top: 25px !important;
+  box-shadow: none !important;
+}
+.ui.button{
+box-shadow: none !important;
+}
+.marginTop{
+  margin-top: 35px !important;
+}
+.ui.card, .ui.cards>.card {
+  border-radius: 5px !important;
+  background-color: white !important;
+  box-shadow: 4px 4px 8px 1px #ededef, 0 0 0 1px #f1f1f3 !important;
+  cursor: pointer;
+}
+.ui.card, .ui.cards>.card:hover{
+  background-color: white !important;
+  cursor: pointer;
+}
+.cardImage{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-top: 3px;
+  margin-bottom: 3px;
+
+}
+
+.float {
+	transition: all ease 0.5s !important;
+}
+
+.float:hover {
+	-webkit-box-shadow: 6px 6px 14px -8px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 6px 6px 14px -8px rgba(0, 0, 0, 0.5);
+	box-shadow: 6px 6px 14px -8px rgba(0, 0, 0, 0.5);
+	/* background: #23638E; */
+	/* padding: 30px 30px 70px 30px; */
+	box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+	transform: translateY(-8px);
+  border: 1px solid rgba(0, 0, 0, 0.18) !important;
+	/* color: white; */
+}
+.content{
+  padding: 25px;
+}
+.productImage{
+  padding: 10px;
+  margin: auto;
+  display: block;
+  max-width: 150px;
+  /* border-radius: 50%; */
+}
+.alignLeft{
+ text-align: left;
+}
+.label{
+  font-weight: 600;
+  margin-right: 3px;
+  color: rgb(90, 27, 82);
+}
+
+.detailItem{
+  margin-bottom: 25px;
+}
+
+.bubble{
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 1px solid gray;
+  margin-right: 5px;
+  display: inline-block;
+  margin-bottom: -2.5px;
+}
+.bubble.red{
+  background: #ff7675;
+}
+.bubble.blue{
+  background: #6c5ce7;
+}
+.bubble.green{
+  background: #55efc4;
+}
+.bubble.orange{
+  background: #feca57;
+}
+.bubble:active{
+  border: 2px solid black;
+}
+.ui.tag.label{
+  margin-bottom: 3px;
+}
+/* .minHeight{
+  min-height: 350px !important;
+} */
+.ui.segment{
+  border: none !important;
+}
+.pt{
+  margin-top:10px !important;
+}
