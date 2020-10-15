@@ -22,6 +22,9 @@ code {
 .logo{
  margin-top: 20px;
 }
+.ui.small.image {
+  width: 135px!important;
+}
 .Links{
   margin-top: 25px;
   display: flex;

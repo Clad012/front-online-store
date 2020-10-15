@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import React from 'react'
-import { Search, Grid, Label, Image } from 'semantic-ui-react'
+import { Search, Grid } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { ApplicationState } from '../../store'
 import { Product } from '../../store/products/types'
@@ -18,12 +18,12 @@ interface PropsFromState {
 
 
 const initialState = { isLoading: false, results: [], value: '' }
-const resultRenderer = ({ title, image, price }: any) => {
+// const resultRenderer = ({ title, image, price }: any) => {
 
-    return (<div>
-    <Image src={image} size='tiny' verticalAlign='middle' />
-    <span className="title">{title}</span></div>)
-}
+//     return (<div>
+//     <Image src={image} size='tiny' verticalAlign='middle' />
+//     <span className="title">{title}</span></div>)
+// }
 type AllProps = PropsFromState & RouteComponentProps
 class SearchExampleStandard extends React.Component<AllProps, any> {
   state = initialState

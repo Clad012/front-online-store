@@ -18,12 +18,12 @@ export default class MenuExampleStackable extends Component {
     <Container>
         {/* <Header /> */}
         
-        <Grid className="marginTop" stretched>
+        <Grid container className="marginTop" stretched stackable>
             <Grid.Row>
-            <Grid.Column width={3}>
+            <Grid.Column   mobile={8} tablet={4} computer={3}>
                 <SideMenu />
             </Grid.Column>
-            <Grid.Column width={13}>
+            <Grid.Column  mobile={8} tablet={12} computer={13}>
                 <TopNav />
                 <Routes />
             </Grid.Column>

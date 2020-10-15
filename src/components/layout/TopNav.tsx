@@ -10,8 +10,8 @@ export default class MenuExampleInvertedSegment extends Component {
     const { activeItem } = this.state
 
     return (
-      <Segment >
-        <Menu  secondary>
+      <Segment  >
+        <Menu  secondary stackable >
           <Menu.Item
             name='Rechercher'
             active={activeItem === 'friends'}

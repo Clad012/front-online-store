@@ -34,15 +34,15 @@ class ProductsIndexPage extends React.Component<AllProps> {
     // let search = new URLSearchParams(this.props.location.search);
     getProducts(params.query ? String(params.query) : 'all');
   }
-  componentWillReceiveProps(){
+  componentDidUpdate(){
       setTimeout(() => {
-        console.log('CLICKED')
-        const { fetchRequest: getProducts, query: query } = this.props
+        // console.log('CLICKED')
+        const { fetchRequest: getProducts, query: queryProp } = this.props
         const { match: { params } }: any = this.props;
 
         let queryStr = params.query ? params.query : 'all';
-        console.log(query, queryStr)
-        if(!this.props.loading && (queryStr != query)){
+      
+        if(!this.props.loading && (queryStr !== queryProp)){
             getProducts(queryStr);
         }
       }, 100);
@@ -51,7 +51,7 @@ class ProductsIndexPage extends React.Component<AllProps> {
     const { loading, data } = this.props
 
     return (
-      <Card.Group itemsPerRow={3}>
+      <Card.Group itemsPerRow={3} stackable>
         {loading && data.length === 0 && (
             <div></div>
         )}

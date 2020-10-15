@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Icon, Card, Button, Image, Label } from 'semantic-ui-react'
+import { Card, Image, Label } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 export default class MenuExampleInvertedVertical extends Component {
@@ -11,7 +11,7 @@ export default class MenuExampleInvertedVertical extends Component {
     // const { activeItem } = this.state
 
     return (
-        <Card fluid className="minHeight alignLeft linkCard">
+        <Card fluid className="minHeight alignLeft linkCard" >
             <div className="logo">
                   <Image src='https://uploads-ssl.webflow.com/5d6697e045315232309ca291/5f464d99f24bfc3ab155f93e_smaller%20version%20new%20logo%20(2).png' size='small' />
             </div>
