@@ -53,7 +53,7 @@ class ProductsIndexPage extends React.Component<AllProps> {
     return (
       <Card.Group itemsPerRow={3}>
         {loading && data.length === 0 && (
-            <div>Loading...</div>
+            <div></div>
         )}
         {data.map(product => (
               <Card key={product.id} className="float">
