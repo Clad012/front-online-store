@@ -9,7 +9,6 @@ const LOCAL_API = process.env.REACT_APP_API_ENDPOINT || 'http://localhost:4000'
 const API_ENDPOINT = isLocal ? LOCAL_API : GLITCH_ENDPOINT;
 function* handleFetch(action: ReturnType<typeof fetchRequest>) {
   try {
-    // To call async functions, use redux-saga's `call()`.
     const res = yield call(callApi, 'get', API_ENDPOINT, 'products?query='+action.payload)
 
     if (res.error) {
@@ -28,7 +27,7 @@ function* handleFetch(action: ReturnType<typeof fetchRequest>) {
 
 function* handleFetchOneProduct(action: ReturnType<typeof fetchOneProductRequest>) {
   try {
-    // To call async functions, use redux-saga's `call()`.
+    // async functions`call()`.
     const res = yield call(callApi, 'get', API_ENDPOINT, 'products/'+action.payload)
 
     if (res.error) {
@@ -46,8 +45,6 @@ function* handleFetchOneProduct(action: ReturnType<typeof fetchOneProductRequest
 }
 
 
-// watcher function. `take*()` functions to watch Redux for a specific action
-// type, and run saga, for example the `handleFetch()` saga above.
 function* watchFetchRequest() {
   yield takeEvery(ProductsActionTypes.FETCH_REQUEST, handleFetch)
 }
@@ -55,7 +52,7 @@ function* watchFetchRequestOneProduct() {
   yield takeLatest(ProductsActionTypes.FETCH_ONE_REQUEST, handleFetchOneProduct)
 }
 
-// We can also use `fork()` here to split our saga into multiple watchers.
+// `fork()` to multiple watchers.
 function* productsSaga() {
   yield all([fork(watchFetchRequest), fork(watchFetchRequestOneProduct)])
 }

@@ -19,8 +19,7 @@ export enum ProductsActionTypes {
   SET_QUERY = '@@products/SET_QUERY'
 }
 
-// Declare state types with `readonly` modifier to get compile time immutability.
-// https://github.com/piotrwitek/react-redux-typescript-guide#state-with-type-level-immutability
+
 export interface ProductsState {
   readonly loading: boolean
   readonly data: Product[],
