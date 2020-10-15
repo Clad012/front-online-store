@@ -41,13 +41,13 @@ class ProductDetails extends React.Component<AllProps> {
     public render(){
         const { product, loading } = this.props
         return   (
-        <Card fluid>
+        <Card fluid >
             {loading && (
                 <Loader />
             )}
             {product && (
               <>
-                <Grid columns={3} divided>
+                <Grid columns={3} divided stackable>
                     <Grid.Row>
                     <Grid.Column>
                         <div className="content">
